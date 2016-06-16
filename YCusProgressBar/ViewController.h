@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CusProgressView.h"
 
 @interface ViewController : UIViewController
+@property (retain, nonatomic) IBOutlet UILabel *FProgressValueLabel;
+@property (retain, nonatomic) IBOutlet CusProgressView *FCusProgressView;
 
+@property (retain, nonatomic) IBOutlet UIImageView *FImageView;
+-(IBAction)Select:(id)sender;
 @end
