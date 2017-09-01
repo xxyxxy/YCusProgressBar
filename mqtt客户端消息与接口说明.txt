@@ -24,3 +24,5 @@ mqtt接口说明
 
 
 注：客户端进入聊天室之后,须订阅topic:yijingj/room/房间号;与服务器的通讯使用topic:yijingj;全局订阅topic:yijingj/notice/
+
+02
