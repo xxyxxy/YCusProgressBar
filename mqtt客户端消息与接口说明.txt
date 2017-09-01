@@ -1,0 +1,26 @@
+mqtt客户端消息说明 
+//1.进入聊天室/直播间通知
+//{"action":"online","data":{"count":%s,"userId":%s,"praise":%s}}
+//count 聊天室人数
+//userId 客户id
+
+//2.退出聊天室/直播间通知
+//{"action":"offline","data":{"count":%s,"userId":%s,"praise":%s}}
+//count 聊天室人数
+//userId 客户id
+
+3.点赞通知
+{"action":"thumup","data":{"count":%s,"userId":%s,"praise":%s}}
+count 聊天室人数
+userId 客户id
+
+mqtt接口说明
+1.进入聊天室
+{"action":"online","data":{"roomId":会议id,"userId":用户id}}
+2.退出聊天室
+{"action":"offline","data":{"roomId":会议id,"userId":用户id}}
+3.点赞
+{"action":"thumup","data":{"roomId":会议id,"userId":用户id}}
+
+
+注：客户端进入聊天室之后,须订阅topic:yijingj/room/房间号;与服务器的通讯使用topic:yijingj;全局订阅topic:yijingj/notice/
